@@ -15,5 +15,38 @@ namespace ProgettoTest
         {
             InitializeComponent();
         }
+
+        private void ifButton_Click(object sender, EventArgs e)
+        {
+            string nome = "Pippo";
+            int anni = 28;
+
+            /* 
+             * a > b,
+             * a < b,
+             * a >= b,
+             * a <= b,
+             * a == b,
+             * a != b <-- DIVERSO
+             */
+
+            /*
+             * && <-- and
+             * || <-- or
+             */
+
+            if (nome == "Giovanni" && anni == 28)
+            {
+                Console.WriteLine("Ciao sei Giovanni");
+            }
+            else if (anni == 28)
+            {
+                Console.WriteLine("L'età è giusta ma non sei Giovanni");
+            }
+            else
+            {
+                Console.WriteLine("Non sei Giovanni");
+            }
+        }
     }
 }

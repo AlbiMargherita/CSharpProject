@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.ifButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // ifButton
+            // 
+            this.ifButton.Location = new System.Drawing.Point(12, 12);
+            this.ifButton.Name = "ifButton";
+            this.ifButton.Size = new System.Drawing.Size(83, 31);
+            this.ifButton.TabIndex = 0;
+            this.ifButton.Text = "If button";
+            this.ifButton.UseVisualStyleBackColor = true;
+            this.ifButton.Click += new System.EventHandler(this.ifButton_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.ifButton);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button ifButton;
     }
 }
 
