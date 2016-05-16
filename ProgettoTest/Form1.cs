@@ -35,7 +35,7 @@ namespace ProgettoTest
              * || <-- or
              */
 
-            if (nome == "Giovanni" && anni == 28)
+            if ( (nome == "Giovanni" || nome == "Gio") && anni == 28)
             {
                 Console.WriteLine("Ciao sei Giovanni");
             }
@@ -47,6 +47,69 @@ namespace ProgettoTest
             {
                 Console.WriteLine("Non sei Giovanni");
             }
+
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void switchButton_Click(object sender, EventArgs e)
+        {
+            string nome = "Pippo";
+            int anni = 28;
+
+            switch (nome)
+            {
+                case "Gio":
+                case "Giovanni":
+                    if (anni == 28) Console.WriteLine("Sei Giovanni");
+                    else Console.WriteLine("Non sei Giovanni che sto cercando");
+
+                    break;
+                case "Paolo":
+                    Console.WriteLine("Non sei Giovanni ma sei suo amico");
+                    break;
+                case "Pino":
+                    Console.WriteLine("Non sei Giovanni e sei un suo acerrimo nemico");
+                    break;
+                default:
+                    Console.WriteLine("Non sei Giovanni e non ti conosco");
+                    break;
+            }
+        }
+
+        private void forButton_Click(object sender, EventArgs e)
+        {
+            // i = i + 1;  ==  i += 1;  ==  i++;
+            // i = i - 1;  ==  i -= 1;  ==  i--;
+            // i = i + 2;  ==  i += 2;
+            // i = i - 2;  ==  i -= 2,
+
+            // for ( dichiaro e inizializzo contatore; condizione (fino a che è vera continuo); di quanto incremento il concatore ad ogni passo)
+            for (int i = 0; i <= 10; i++)
+            {
+                Console.WriteLine("Ciao");
+            }
+        }
+
+        private int somma(int a, int b)
+        {
+            return a + b;
+        }
+
+        private void sommaButt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                result.Text = somma(int.Parse(aTxt.Text), int.Parse(bTxt.Text)).ToString();
+            }
+            catch
+            {
+                result.Text = "Valore non numerico!";
+            }
+        }
+
     }
 }
